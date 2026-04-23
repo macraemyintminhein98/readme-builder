@@ -4,44 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>README Builder</title>
-    <meta name="description" content="Easily create professional GitHub READMEs.">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1.5.10/css/pico.min.css">
-    <style>
-        body { background-color: #f0f4f8; }
-        .container { max-width: 960px; margin-top: 3rem; background-color: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        hgroup { text-align: center; margin-bottom: 2rem; }
-        .button-group { display: flex; justify-content: center; gap: 1rem; margin-top: 2rem; }
-        footer { text-align: center; margin-top: 3rem; color: #555; font-size: 0.9em; }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <main class="container">
-        <hgroup>
-            <h1>README Builder</h1>
-            <p class="lead">Craft stunning GitHub READMEs in minutes.</p>
-        </hgroup>
-        <section>
-            <p><strong>README Builder</strong> helps developers, open-source maintainers, and students create professional and dynamic GitHub README files effortlessly. Choose from templates, drag-and-drop pre-built sections like badges, feature lists, and contributing guidelines, and export clean Markdown.</p>
-            <ul>
-                <li>Pre-built Templates & Sections</li>
-                <li>Simple Drag-and-Drop Interface</li>
-                <li>Generate Clean Markdown</li>
-                <li>Perfect for Any Project</li>
-            </ul>
-        </section>
-        <div class="button-group">
-            <a href="#" class="button primary">Start Building Your README</a>
-            <a href="#" class="button outline">See Demo</a>
-        </div>
-        <section style="margin-top: 3rem; text-align: center;">
-            <h2>Unlock Premium Features</h2>
-            <p>Access advanced templates, custom sections, and priority support.</p>
-            <p><strong>One-time purchase for full access!</strong></p>
-            <p><a href="/checkout" class="button secondary">Get Full Access - $9.99</a></p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 README Builder. All rights reserved.</p>
-    </footer>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+        <h1 class="text-3xl font-bold mb-6 text-gray-800 text-center">README Builder</h1>
+        <p class="text-center text-gray-600 mb-8">Craft professional READMEs with ease.</p>
+        
+        <form action="/checkout" method="POST" class="space-y-4">
+            <div>
+                <label for="projectName" class="block text-sm font-medium text-gray-700">Project Name</label>
+                <input type="text" id="projectName" name="projectName" placeholder="My Awesome Project" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <div>
+                <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
+                <textarea id="description" name="description" rows="3" placeholder="A brief overview of your project..." class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                Generate README - $9.99
+            </button>
+        </form>
+
+        <p class="text-center text-sm text-gray-500 mt-6">More features available after purchase.</p>
+    </div>
 </body>
 </html>
