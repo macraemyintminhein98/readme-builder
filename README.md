@@ -1,14 +1,20 @@
 # README Builder
 
-Craft stunning GitHub READMEs in minutes with dynamic templates and a drag-and-drop interface. Generate clean Markdown for your projects, portfolios, and libraries.
+Craft professional README files effortlessly for your GitHub projects. Input your project's details, and we'll generate a high-quality, customizable `README.md` for you, complete with templates and badges.
 
-## Features
+## Features (Premium)
 
-- Pre-built Templates & Sections
-- Simple Drag-and-Drop Interface
-- Generate Clean Markdown
-- Ideal for Developers, Open-Source Projects, Students
+*   **Customizable Templates:** Choose from various professional layouts.
+*   **Badge Integration:** Easily add popular badges (build status, license, etc.).
+*   **Section Generation:** Automatically create sections for Installation, Usage, Contributing, and more.
+*   **Copy-to-Clipboard:** Get your generated markdown instantly.
 
 ## Get Started
 
-Visit [readmebuilder.com](https://www.readmebuilder.com) to start building your professional README today!
+Visit [README Builder](https://www.example.com) to generate your first README today!
+
+## Pricing
+
+*   **One-time purchase:** $9.99
+
+Perfect for developers, open-source contributors, and students who value efficiency and presentation.
