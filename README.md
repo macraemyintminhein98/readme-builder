@@ -1,20 +1,14 @@
-# README Builder
+# APEX: README Builder
 
-Craft professional README files effortlessly for your GitHub projects. Input your project's details, and we'll generate a high-quality, customizable `README.md` for you, complete with templates and badges.
+A web application to help developers quickly create professional and visually appealing GitHub README files with templates, emojis, badges, and table of contents generation.
 
-## Features (Premium)
+## Features:
 
-*   **Customizable Templates:** Choose from various professional layouts.
-*   **Badge Integration:** Easily add popular badges (build status, license, etc.).
-*   **Section Generation:** Automatically create sections for Installation, Usage, Contributing, and more.
-*   **Copy-to-Clipboard:** Get your generated markdown instantly.
+*   **Intuitive Editor:** Write markdown with live preview.
+*   **Templates:** Start with high-quality, pre-defined README structures.
+*   **Copy to Clipboard:** Easily grab your generated markdown.
+*   **Premium Features (Coming Soon):** Unlock advanced templates, custom badge generation, and more.
 
-## Get Started
+## Get Started:
 
-Visit [README Builder](https://www.example.com) to generate your first README today!
-
-## Pricing
-
-*   **One-time purchase:** $9.99
-
-Perfect for developers, open-source contributors, and students who value efficiency and presentation.
+Visit [your-deployment-url.vercel.app](http://localhost:3000) (or wherever you deploy this) to start building your perfect README!
