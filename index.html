@@ -3,29 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>README Builder</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>APEX: README Builder</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.5.10/css/pico.min.css">
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; line-height: 1.6; padding: 20px; }
+        main { max-width: 960px; margin: 20px auto; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        textarea, .preview { min-height: 400px; padding: 15px; border: 1px solid var(--pico-form-element-border-color); border-radius: var(--pico-border-radius); font-family: monospace; }
+        .preview { background-color: var(--pico-background-color); overflow-y: auto; }
+        @media (max-width: 768px) { main { grid-template-columns: 1fr; } }
+    </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-        <h1 class="text-3xl font-bold mb-6 text-gray-800 text-center">README Builder</h1>
-        <p class="text-center text-gray-600 mb-8">Craft professional READMEs with ease.</p>
-        
-        <form action="/checkout" method="POST" class="space-y-4">
-            <div>
-                <label for="projectName" class="block text-sm font-medium text-gray-700">Project Name</label>
-                <input type="text" id="projectName" name="projectName" placeholder="My Awesome Project" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-            </div>
-            <div>
-                <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
-                <textarea id="description" name="description" rows="3" placeholder="A brief overview of your project..." class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
-            </div>
-            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-                Generate README - $9.99
-            </button>
-        </form>
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><a href="/" class="contrast"><strong>APEX: README Builder</strong></a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Templates</a></li>
+            <li><a href="#">Premium</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <article>
+            <hgroup>
+                <h1>Craft Your README</h1>
+                <p>Instantly generate professional GitHub READMEs.</p>
+            </hgroup>
+            <label for="markdown-input">Markdown Editor</label>
+            <textarea id="markdown-input" placeholder="Start typing your README..." onkeyup="updatePreview(this.value)">
+# My Awesome Project 🚀
 
-        <p class="text-center text-sm text-gray-500 mt-6">More features available after purchase.</p>
-    </div>
+**A brief, engaging introduction to your project.**
+
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [License](#license)
+
+## Installation
+
+bash
+git clone https://github.com/your/repo.git
+cd repo
+npm install
+
+
+## Usage
+
+bash
+npm start
+
+
+_Example: How to use your amazing software._
+
+![Screenshot of your project](https://via.placeholder.com/400x200?text=Project+Screenshot)
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+</textarea>
+            <button onclick="copyToClipboard()">Copy to Clipboard</button>
+        </article>
+        <article>
+            <hgroup>
+                <h2>README Preview</h2>
+                <p>See your markdown rendered live.</p>
+            </hgroup>
+            <div class="preview" id="markdown-preview">
+                <!-- Markdown will be rendered here -->
+            </div>
+        </article>
+    </main>
+    <footer class="container">
+        <small>Powered by <a href="https://github.com/apex-sh" class="secondary">APEX</a></small>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        function updatePreview(markdown) {
+            document.getElementById('markdown-preview').innerHTML = marked.parse(markdown);
+        }
+
+        function copyToClipboard() {
+            const markdownInput = document.getElementById('markdown-input');
+            markdownInput.select();
+            document.execCommand('copy');
+            alert('README copied to clipboard!');
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            updatePreview(document.getElementById('markdown-input').value);
+        });
+    </script>
 </body>
 </html>
