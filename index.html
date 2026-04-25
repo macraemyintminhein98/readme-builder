@@ -3,109 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APEX: README Builder</title>
-    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.5.10/css/pico.min.css">
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; line-height: 1.6; padding: 20px; }
-        main { max-width: 960px; margin: 20px auto; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        textarea, .preview { min-height: 400px; padding: 15px; border: 1px solid var(--pico-form-element-border-color); border-radius: var(--pico-border-radius); font-family: monospace; }
-        .preview { background-color: var(--pico-background-color); overflow-y: auto; }
-        @media (max-width: 768px) { main { grid-template-columns: 1fr; } }
-    </style>
+    <title>README Builder</title>
+    <meta name="description" content="Create dynamic GitHub READMEs.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>" />
 </head>
-<body>
-    <nav class="container-fluid">
-        <ul>
-            <li><a href="/" class="contrast"><strong>APEX: README Builder</strong></a></li>
-        </ul>
-        <ul>
-            <li><a href="#">Templates</a></li>
-            <li><a href="#">Premium</a></li>
-            <li><a href="#">Login</a></li>
-        </ul>
-    </nav>
-    <main class="container">
-        <article>
-            <hgroup>
-                <h1>Craft Your README</h1>
-                <p>Instantly generate professional GitHub READMEs.</p>
-            </hgroup>
-            <label for="markdown-input">Markdown Editor</label>
-            <textarea id="markdown-input" placeholder="Start typing your README..." onkeyup="updatePreview(this.value)">
-# My Awesome Project 🚀
+<body class="bg-gray-900 text-gray-100 flex flex-col min-h-screen font-sans">
+    <header class="container mx-auto p-4 flex justify-between items-center">
+        <h1 class="text-3xl font-bold text-purple-400">README Builder</h1>
+        <nav>
+            <a href="#features" class="text-gray-300 hover:text-white mx-2">Features</a>
+            <a href="#pricing" class="text-gray-300 hover:text-white mx-2">Pricing</a>
+        </nav>
+    </header>
 
-**A brief, engaging introduction to your project.**
+    <main class="flex-grow container mx-auto p-8 text-center">
+        <section class="hero my-16">
+            <h2 class="text-5xl font-extrabold mb-6 leading-tight">Craft Your Perfect GitHub README</h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Dynamic, professional, and effortless. Showcase your work like never before.</p>
+            <button onclick="window.location.href='#pricing'" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                Get Started Now
+            </button>
+        </section>
 
-## Table of Contents
-
-* [Installation](#installation)
-* [Usage](#usage)
-* [Contributing](#contributing)
-* [License](#license)
-
-## Installation
-
-bash
-git clone https://github.com/your/repo.git
-cd repo
-npm install
-
-
-## Usage
-
-bash
-npm start
-
-
-_Example: How to use your amazing software._
-
-![Screenshot of your project](https://via.placeholder.com/400x200?text=Project+Screenshot)
-
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-</textarea>
-            <button onclick="copyToClipboard()">Copy to Clipboard</button>
-        </article>
-        <article>
-            <hgroup>
-                <h2>README Preview</h2>
-                <p>See your markdown rendered live.</p>
-            </hgroup>
-            <div class="preview" id="markdown-preview">
-                <!-- Markdown will be rendered here -->
+        <section id="features" class="my-20">
+            <h3 class="text-4xl font-bold text-purple-400 mb-12">Features That Impress</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                    <h4 class="text-2xl font-semibold mb-3">Live Updates</h4>
+                    <p class="text-gray-400">Automatically show your latest commits and projects.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                    <h4 class="text-2xl font-semibold mb-3">Skill Badges</h4>
+                    <p class="text-gray-400">Integrate Shields.io badges for your tech stack.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                    <h4 class="text-2xl font-semibold mb-3">Custom Templates</h4>
+                    <p class="text-gray-400">Choose from beautiful, professional README layouts.</p>
+                </div>
             </div>
-        </article>
-    </main>
-    <footer class="container">
-        <small>Powered by <a href="https://github.com/apex-sh" class="secondary">APEX</a></small>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script>
-        function updatePreview(markdown) {
-            document.getElementById('markdown-preview').innerHTML = marked.parse(markdown);
-        }
+        </section>
 
-        function copyToClipboard() {
-            const markdownInput = document.getElementById('markdown-input');
-            markdownInput.select();
-            document.execCommand('copy');
-            alert('README copied to clipboard!');
-        }
-        document.addEventListener('DOMContentLoaded', () => {
-            updatePreview(document.getElementById('markdown-input').value);
-        });
-    </script>
+        <section id="pricing" class="my-20">
+            <h3 class="text-4xl font-bold text-purple-400 mb-12">Simple Pricing</h3>
+            <div class="bg-gray-800 p-8 rounded-lg shadow-lg max-w-md mx-auto">
+                <h4 class="text-3xl font-bold mb-4">One-Time Generate</h4>
+                <p class="text-5xl font-extrabold mb-6">$9.99</p>
+                <p class="text-gray-400 mb-8">Generate and publish one stunning, dynamic GitHub README.</p>
+                <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    Create My README
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 p-6 text-center text-gray-500">
+        <p>&copy; 2023 README Builder. All rights reserved.</p>
+    </footer>
 </body>
 </html>
