@@ -4,61 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>README Builder</title>
-    <meta name="description" content="Create dynamic GitHub READMEs.">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>" />
+    <meta name="description" content="Generate professional GitHub READMEs effortlessly.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>">
+    <style>
+        body { font-family: sans-serif; margin: 0; padding: 20px; background-color: #f4f7f6; color: #333; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        .container { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 800px; width: 100%; text-align: center; }
+        h1 { color: #2c3e50; margin-bottom: 10px; }
+        p { font-size: 1.1em; line-height: 1.6; margin-bottom: 20px; }
+        .price { font-size: 2em; color: #1abc9c; font-weight: bold; margin-bottom: 25px; }
+        .btn { background-color: #3498db; color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; font-size: 1.1em; transition: background-color 0.3s ease; }
+        .btn:hover { background-color: #2980b9; }
+        .features { text-align: left; margin-top: 30px; margin-bottom: 30px; font-size: 0.95em; color: #555; }
+        .features ul { list-style: none; padding: 0; }
+        .features li { margin-bottom: 8px; position: relative; padding-left: 20px; }
+        .features li::before { content: '✓'; color: #1abc9c; position: absolute; left: 0; }
+    </style>
 </head>
-<body class="bg-gray-900 text-gray-100 flex flex-col min-h-screen font-sans">
-    <header class="container mx-auto p-4 flex justify-between items-center">
-        <h1 class="text-3xl font-bold text-purple-400">README Builder</h1>
-        <nav>
-            <a href="#features" class="text-gray-300 hover:text-white mx-2">Features</a>
-            <a href="#pricing" class="text-gray-300 hover:text-white mx-2">Pricing</a>
-        </nav>
-    </header>
-
-    <main class="flex-grow container mx-auto p-8 text-center">
-        <section class="hero my-16">
-            <h2 class="text-5xl font-extrabold mb-6 leading-tight">Craft Your Perfect GitHub README</h2>
-            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Dynamic, professional, and effortless. Showcase your work like never before.</p>
-            <button onclick="window.location.href='#pricing'" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                Get Started Now
-            </button>
-        </section>
-
-        <section id="features" class="my-20">
-            <h3 class="text-4xl font-bold text-purple-400 mb-12">Features That Impress</h3>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                    <h4 class="text-2xl font-semibold mb-3">Live Updates</h4>
-                    <p class="text-gray-400">Automatically show your latest commits and projects.</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                    <h4 class="text-2xl font-semibold mb-3">Skill Badges</h4>
-                    <p class="text-gray-400">Integrate Shields.io badges for your tech stack.</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                    <h4 class="text-2xl font-semibold mb-3">Custom Templates</h4>
-                    <p class="text-gray-400">Choose from beautiful, professional README layouts.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="pricing" class="my-20">
-            <h3 class="text-4xl font-bold text-purple-400 mb-12">Simple Pricing</h3>
-            <div class="bg-gray-800 p-8 rounded-lg shadow-lg max-w-md mx-auto">
-                <h4 class="text-3xl font-bold mb-4">One-Time Generate</h4>
-                <p class="text-5xl font-extrabold mb-6">$9.99</p>
-                <p class="text-gray-400 mb-8">Generate and publish one stunning, dynamic GitHub README.</p>
-                <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                    Create My README
-                </button>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-gray-800 p-6 text-center text-gray-500">
-        <p>&copy; 2023 README Builder. All rights reserved.</p>
-    </footer>
+<body>
+    <div class="container">
+        <h1>README Builder</h1>
+        <p>Effortlessly create professional and polished GitHub READMEs.</p>
+        <p>Input your project details, select components, and get instant, copy-pasteable Markdown.</p>
+        <div class="features">
+            <ul>
+                <li>Customizable templates</li>
+                <li>Badges, TOC, Features, Usage sections</li>
+                <li>Simple form-based interface</li>
+                <li>Save time, look professional</li>
+            </ul>
+        </div>
+        <div class="price">$9.99<p style="font-size: 0.5em; margin-top: 5px; color: #777;">(One-time purchase)</p></div>
+        <a href="#" class="btn">Get Your Professional README Now</a>
+    </div>
 </body>
 </html>
