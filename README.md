@@ -1,18 +1,22 @@
-# README Builder
+# Readme Builder
 
-**Craft your perfect GitHub README with ease!**
+Instantly generate professional, dynamic `README.md` files for your GitHub repositories. Streamline your project setup with badges, installation guides, usage examples, and more.
 
-README Builder is a micro-SaaS web application designed for developers, open-source contributors, and tech enthusiasts. It simplifies the creation of professional and dynamically updated GitHub READMEs. 
+## Features
 
-**Features:**
-*   **Dynamic Content:** Automatically update your README with the latest commits, projects, and activities pulled directly from the GitHub API.
-*   **Skill Badges:** Easily integrate Shields.io badges to showcase your technical skills and stack.
-*   **Customizable Templates:** Choose from a selection of pre-designed, professional templates that you can customize to fit your personal brand.
-*   **Effortless Generation:** Generate markdown output you can copy/paste or push directly to your GitHub repository.
+*   **Easy Input:** Simple forms for all project details.
+*   **Dynamic Badges:** Auto-generated shields.io badges (build status, license, etc.).
+*   **Markdown Export:** Get a ready-to-use markdown file in seconds.
+*   **Professional Output:** Enhance your project's first impression.
 
-**Why use README Builder?**
-*   **Save Time:** No more manual editing to keep your profile fresh.
-*   **Look Professional:** Present your work in the best possible light.
-*   **Easy to Use:** Intuitive interface, no complex setup required.
+## Get Started
 
-Visit [README Builder](link-to-your-deployed-app) to get started!
+Visit [apex-slug-product-url.com](https://www.example.com) to generate your README now!
+
+## Pricing
+
+One-time payment of $9.99 per README.
+
+## Need Help?
+
+Contact support@example.com.
